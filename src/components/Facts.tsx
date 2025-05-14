@@ -1,5 +1,6 @@
 import React from "react";
 import Icon from "@/components/ui/icon";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Facts: React.FC = () => {
   const facts = [
@@ -68,17 +69,80 @@ const Facts: React.FC = () => {
         ))}
       </div>
 
-      <div className="mt-16 p-6 border border-owl-gold bg-owl-beige rounded-lg shadow-md animate-on-scroll">
-        <h3 className="text-2xl font-bold mb-4 text-owl-darkbrown text-center">
-          Природоохранный статус
-        </h3>
-        <p className="text-lg">
-          Филины занесены в Красную книгу многих стран и регионов, включая
-          Калужскую область России. Основные угрозы для их популяции — это
-          разрушение среды обитания, браконьерство и отравление ядохимикатами.
-          Для сохранения этих величественных птиц необходимы программы по охране
-          их естественных мест обитания и борьба с незаконной охотой.
-        </p>
+      <div className="mt-16 animate-on-scroll">
+        <Card className="border border-owl-gold overflow-hidden">
+          <div className="grid md:grid-cols-2">
+            <div className="p-6 bg-owl-beige">
+              <h3 className="text-2xl font-bold mb-4 text-owl-darkbrown">
+                Природоохранный статус
+              </h3>
+              <p className="mb-4">
+                Филины занесены в Красную книгу многих стран и регионов, включая
+                Красную книгу Калужской области, где они имеют статус 1
+                категории (вид, находящийся под угрозой исчезновения).
+              </p>
+              <p className="mb-4">Основные угрозы для их популяции:</p>
+              <ul className="list-disc ml-6 mb-4">
+                <li>Разрушение среды обитания</li>
+                <li>Браконьерство</li>
+                <li>Беспокойство в период гнездования</li>
+                <li>Отравление ядохимикатами</li>
+              </ul>
+            </div>
+            <div className="p-6">
+              <h3 className="text-2xl font-bold mb-4 text-owl-darkbrown">
+                Меры охраны в Калужской области
+              </h3>
+              <p className="mb-4">
+                Для сохранения филина в Калужской области реализуются следующие
+                меры:
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <Icon
+                    name="CheckCircle"
+                    className="h-5 w-5 text-green-600 mt-0.5 mr-2 flex-shrink-0"
+                  />
+                  <span>
+                    Создание особо охраняемых природных территорий в местах
+                    обитания филина
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <Icon
+                    name="CheckCircle"
+                    className="h-5 w-5 text-green-600 mt-0.5 mr-2 flex-shrink-0"
+                  />
+                  <span>Регулярный мониторинг известных мест гнездования</span>
+                </li>
+                <li className="flex items-start">
+                  <Icon
+                    name="CheckCircle"
+                    className="h-5 w-5 text-green-600 mt-0.5 mr-2 flex-shrink-0"
+                  />
+                  <span>
+                    Создание охранных зон вокруг гнездовий с запретом
+                    хозяйственной деятельности
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <Icon
+                    name="CheckCircle"
+                    className="h-5 w-5 text-green-600 mt-0.5 mr-2 flex-shrink-0"
+                  />
+                  <span>Экологическое просвещение местного населения</span>
+                </li>
+                <li className="flex items-start">
+                  <Icon
+                    name="CheckCircle"
+                    className="h-5 w-5 text-green-600 mt-0.5 mr-2 flex-shrink-0"
+                  />
+                  <span>Штрафы за незаконную охоту и разорение гнезд</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </Card>
       </div>
     </section>
   );
